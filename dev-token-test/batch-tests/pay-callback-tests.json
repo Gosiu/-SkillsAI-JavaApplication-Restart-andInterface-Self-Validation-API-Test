@@ -1,0 +1,21 @@
+[
+  {
+    "method": "POST",
+    "path": "/app/order/create",
+    "body": {
+      "tidX": "388334",
+      "zoneId": "21782",
+      "visitors": [{"id": 13}]
+    },
+    "description": "创建订单"
+  },
+  {
+    "method": "POST",
+    "path": "/app/pft/callback/simulatePay",
+    "body": {
+      "orderNo": "{{orderNo}}",
+      "payOrderNo": "PAY" 
+    },
+    "description": "模拟支付回调"
+  }
+]

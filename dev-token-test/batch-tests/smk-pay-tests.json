@@ -1,0 +1,47 @@
+[
+  {
+    "method": "POST",
+    "path": "/mobile/pay/testDemo",
+    "description": "支付测试Demo - 9.9元组合支付测试（工会卡6.6元+餐补卡3.3元）",
+    "body": null,
+    "tokenType": "app"
+  },
+  {
+    "method": "POST",
+    "path": "/mobile/pay/create",
+    "description": "创建支付订单 - 创建第三方支付订单，返回支付链接地址",
+    "body": {
+      "orderNo": "TEST_BATCH_001",
+      "totalAmount": 990,
+      "ghkAmount": 990,
+      "cbkAmount": 0,
+      "fpkAmount": 0,
+      "otherAmount": 0,
+      "returnUrl": "http://example.com/success",
+      "cancelUrl": "http://example.com/cancel"
+    },
+    "tokenType": "app"
+  },
+  {
+    "method": "POST",
+    "path": "/mobile/pay/callback/smkPay",
+    "description": "第三方支付回调 - 接收第三方支付平台的回调通知，无需认证",
+    "body": {
+      "orderNo": "TEST_BATCH_001",
+      "serialNo": "DSP123456",
+      "status": "SUCCESS"
+    },
+    "tokenType": "app"
+  },
+  {
+    "method": "POST",
+    "path": "/mobile/pay/callback/smkRefund",
+    "description": "第三方退款回调 - 接收第三方支付平台的退款回调通知，无需认证",
+    "body": {
+      "orderNo": "TEST_BATCH_001",
+      "serialNo": "DSP123456",
+      "status": "REFUND"
+    },
+    "tokenType": "app"
+  }
+]

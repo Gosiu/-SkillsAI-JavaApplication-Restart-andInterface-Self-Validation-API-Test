@@ -1,0 +1,11 @@
+[
+  {
+    "method": "GET",
+    "path": "/app/dev/test/smk/pay/callback",
+    "header": {
+      "orderNo": "M1775726747479",
+      "status": "2"
+    },
+    "description": "步骤1: 生成支付回调加密数据（使用实际订单M1775726747479，状态2-成功）"
+  }
+]
